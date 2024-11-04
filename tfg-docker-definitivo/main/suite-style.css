@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    color: black;
+}
+
+.cuerpo{
+    background-color: #e3e3e3;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #ffff;
+    width: 100%;
+    padding: 2% 2% 2% 2%;
+    border-bottom: 1px solid #2e3138;
+    white-space: nowrap;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-links{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.links{
+    margin-left: 15px;
+}
+
+.contenido{
+    width: 100%;
+    padding: 2% 2% 2% 2%;
+}
+
+.arriba{
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta input{
+    display: none;
+}
+
+.tarjeta{
+    flex: 1;
+    background-color: white;
+    border-radius: 1em;
+    margin: 2% 2% 2% 2% ;
+    padding: 2% 2% 2% 2%;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta-contenido{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.tarjeta-contenido-boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta-contenido-boton button{
+    border: none;   
+    background-color: black;
+    color: white;
+    border-radius: 1em;
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.abajo-izquierda{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 1em;
+    margin: 2% 2% 2% 2%;
+    padding: 2% 2% 2% 2%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.abajo-derecha{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 1em;
+    margin: 2% 2% 2% 2%;
+    padding: 2% 2% 2% 2%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.abajo-seccion{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/*------------------------*/
+
+#archivo-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para cada ítem de la lista */
+.archivo-item {
+    margin-bottom: 10px;
+    border: 1px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+    border-radius: 1em;
+    padding: 2% 2% 2% 2%;
+    display: flex;
+    width: 100%;
+}
+
+/* Contenedor de cada archivo */
+.archivo-contenedor {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambio de color de fondo al pasar el ratón */
+.archivo-contenedor:hover {
+    background-color: #e6f7ff;
+}
+
+/* Estilo para el icono del archivo */
+.icono-archivo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Estilo para el nombre del archivo */
+.nombre-archivo {
+    flex-grow: 1;
+}
+
+/* Estilo para los botones */
+.boton-eliminar, .boton-descargar {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo específico para el botón de eliminar */
+.boton-eliminar {
+    background-color: #dc3545;
+}
+
+/* Cambio de color de fondo para los botones al pasar el ratón */
+.boton-eliminar:hover {
+    background-color: #c82333;
+}
+
+.boton-descargar:hover {
+    background-color: #0056b3;
+}
+
+.archivo-izquierda{
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.archivo-derecha{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#ajuste{
+    margin-right: 30px;
+}
+
+/*---------*/
+
+/* Estilo para el contenedor de la sección de búsqueda */
+.abajo-seccion {
+    margin: 10px 0;
+}
+
+/* Estilo para el input de búsqueda */
+.abajo-seccion input[type="search"] {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cambio de borde y sombra al enfocar el input */
+.abajo-seccion input[type="search"]:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+/* Placeholder estilizado */
+.abajo-seccion input[type="search"]::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* ---------- */
+
+/* Estilo para el contenedor del input de archivo */
+.archivo-contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Ajusta según sea necesario */
+}
+
+/* Ocultar el input original */
+#file-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Estilo para el input simulado */
+#file-input + label {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cambio de borde y sombra al enfocar el input simulado */
+#file-input:focus + label,
+#file-input + label:hover {
+    border-color: #aaa;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Placeholder estilizado */
+#file-input + label::before {
+    content: attr(data-placeholder);
+    color: #999;
+    font-style: italic;
+}
+
+@media screen and (max-width: 540px){    
+    header{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .header-links{
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+  }

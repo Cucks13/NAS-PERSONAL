@@ -1,0 +1,163 @@
+body{
+  font-family: "Roboto", sans-serif;
+}
+
+.cuerpo{
+    justify-content: center;
+    align-items: center;
+    background-color: #e3e3e3;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  padding: 2%;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+header div{
+    padding: 10px 0 0 0;
+}
+
+header h1{
+  font-size: 60px;
+  color: black;
+}
+
+.signup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  color: black;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1em;
+  justify-content: center;
+  width: 250px;
+  text-align: center;
+  padding: 5% 5% 5% 5%;
+  margin-top: 2%;
+  margin-bottom: 8%;
+  background-color: white;
+  opacity: 0;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container>h2{
+    color: black;
+}
+
+/*CSS DE LOS LABELS */
+
+.form__group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    max-width: 180px;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: 0;
+    font-size: 17px;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .form__field::placeholder {
+    color: transparent;
+  }
+  
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: black;
+    pointer-events: none;
+  }
+  
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: black;
+    border-image-slice: 1;
+  }
+  
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: black;
+    font-weight: 700;
+  }
+
+#registro{
+  border-radius: 1em;
+  padding: 10px 10px 10px 10px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+#parrafo{
+  color: black;
+}
+
+#parrafo1{
+  color: rgb(95, 95, 95);
+  text-decoration: none;
+}
+
+/*Animaciones*/
+
+.container{animation: entrada1 3s ease .1s forwards;}
+
+@keyframes entrada1{
+  from{
+      transform: translateY(0);
+      opacity: 0;
+  }
+  to{
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@media screen and (max-width: 430px){    
+  .cuerpo {
+     width: 100%;
+     margin-bottom: 40px;
+  }
+
+  header h1{
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,47 @@
+services:
+  db:
+    build:
+      context: ./db/
+      dockerfile: Dockerfile
+    container_name: mysql
+    restart: always
+    ports:
+      - "3306:3306"
+
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=lucas
+      - MYSQL_PASSWORD=lucas
+      - MYSQL_DATABASE=mysql
+
+    volumes:
+      - ./db/latest.sql:/docker-entrypoint-initdb.d/latest.sql
+
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u lucas -p'lucas'"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+    networks:
+      - backend-network
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: apache
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - ./main:/var/www/html/
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - backend-network
+
+networks:
+  backend-network:

@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    padding: 2%;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1{
+  font-size: 60px;
+  color: black;
+}
+
+header h3{
+  font-size: 15px;
+}
+
+.web{
+  background-color: #e3e3e3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 1184px;
+}
+
+.cuerpo{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+body{
+    background-color: #1f1f1f;
+}
+
+
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 1em;
+  justify-content: center;
+  width: 250px;
+  text-align: center;
+  padding: 5% 5% 5% 5%;
+  margin-top: 2%;
+  margin-bottom: 8%;
+  background-color: white;
+  opacity: 0;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login h2{
+  color: black;
+}
+
+
+
+/*CSS DE LOS BOTONES */
+
+button {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 2em;
+  background-color: black;
+  cursor: pointer;
+  margin: 35px 15px;
+  width: 200px;
+  height: 40px;
+}
+
+/*CSS DE LOS LABELS */
+
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+  max-width: 180px;
+  margin-left: 10%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: 0;
+  font-size: 17px;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: black;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: black;
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: black;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+/*Animaciones*/
+
+.login{animation: entrada1 3s ease .1s forwards;}
+#tarjeta-2{animation: entrada2 1.2s ease .5s forwards;}
+header{animation: entradaH 1s ease .5s forwards;}
+
+@keyframes entrada1{
+  from{
+      transform: translateY(0);
+      opacity: 0;
+  }
+  to{
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes entrada2{
+    from{
+        transform: translateY(-400px);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 430px){    
+  .cuerpo {
+     width: 100%;
+     margin-bottom: 40px;
+  }
+
+  .div-h1 h1{
+    font-size: 30px;
+  }
+}

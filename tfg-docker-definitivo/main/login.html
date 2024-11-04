@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="login-style.css">
+</head>
+
+<body>
+    <div class="web">
+        <div class="cuerpo">
+            <header>
+                <div class="div-h1">
+                    <h1>Cloud Storage App</h1>
+                </div>
+            </header>
+        </div>
+
+        <section class="login">
+            <div class="container">
+                <h2>Iniciar sesión</h2>
+                <form action="procesar_login.php" method="POST">
+                    <div class="form__group field">
+                        <input required placeholder="Correo electrónico" class="form__field" type="text" id="username_or_email" name="username_or_email">
+                        <label for="username_or_email" class="form__label">Correo electrónico</label>
+                    </div>
+                    <div class="form__group field">
+                        <input type="password" id="password" required placeholder="Contraseña" class="form__field" name="password">
+                        <label for="password" class="form__label">Contraseña</label>
+                    </div>
+                    <button type="submit" class="btn">Iniciar sesión</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

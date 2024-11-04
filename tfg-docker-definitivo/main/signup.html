@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Registro</title>
+    <link rel="stylesheet" href="signup-style.css">
+    <script>
+        function validarContrasena() {
+            var contrasena = document.getElementById("password").value;
+            var confirmarContrasena = document.getElementById("confirm_password").value;
+
+            if (contrasena != confirmarContrasena) {
+                alert("Las contraseñas no coinciden");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="cuerpo">
+        <header>
+            <div>
+                <h1>Cloud Storage App</h1>
+            </div>
+        </header>
+
+        <section class="signup">
+            <div class="container">
+                <h2>Registro</h2>
+                <form action="procesar_signup.php" method="POST" onsubmit="return validarContrasena()">
+                    <div class="form-control">
+                        <div class="form__group field">
+                            <input required placeholder="Nombre" class="form__field" type="text" id="nombre" name="nombre">
+                            <label for="nombre" class="form__label">Nombre</label>
+                        </div>
+                        <div class="form__group field">
+                            <input required placeholder="Apellidos" class="form__field" type="text" id="apellidos" name="apellidos">
+                            <label for="apellidos" class="form__label">Apellidos</label>
+                        </div>
+                        <div class="form__group field">
+                            <input required placeholder="Correo Electrónico" class="form__field" type="email" id="email" name="email">
+                            <label for="email" class="form__label">Correo Electrónico</label>
+                        </div>
+                        <div class="form__group field">
+                            <input required placeholder="Teléfono" class="form__field" type="text" id="telefono" name="telefono">
+                            <label for="telefono" class="form__label">Teléfono</label>
+                        </div>
+                        <div class="form__group field">
+                            <input required placeholder="Contraseña" class="form__field" type="password" id="password" name="password">
+                            <label for="password" class="form__label">Contraseña</label>
+                        </div>
+                        <div class="form__group field">
+                            <input required placeholder="Confirmar Contraseña" class="form__field" type="password" id="confirm_password" name="confirm_password">
+                            <label for="confirm_password" class="form__label">Confirmar Contraseña</label>
+                        </div>
+                        <button id="registro" type="submit" class="btn">Registrarse</button>
+                    </div>
+                </form>
+                <p id="parrafo">¿Ya tienes una cuenta? <br> <a id="parrafo1" href="login.html">Inicia sesión aquí</a>.</p>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
